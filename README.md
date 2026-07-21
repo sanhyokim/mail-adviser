@@ -32,14 +32,14 @@ npm install
 
 ```
 OPENROUTER_API_KEY=sk-or-v1-xxxxxxxxxxxxx
-OPENROUTER_MODEL=google/gemini-2.0-flash-001
+OPENROUTER_MODEL=google/gemini-2.5-flash
 APP_URL=http://localhost:3000
 ```
 
 | 変数名 | 必須 | 説明 |
 |--------|------|------|
 | `OPENROUTER_API_KEY` | ✅ | OpenRouterのAPIキー。[https://openrouter.ai/keys](https://openrouter.ai/keys) から取得 |
-| `OPENROUTER_MODEL` | - | 使用するモデルID（未設定時: `google/gemini-2.0-flash-001`）。[モデル一覧](https://openrouter.ai/models) |
+| `OPENROUTER_MODEL` | - | 使用するモデルID（未設定時: `google/gemini-2.5-flash`）。[モデル一覧](https://openrouter.ai/models) |
 | `APP_URL` | - | アプリのURL（OpenRouterのHTTP-Refererヘッダーに使用。未設定時: `http://localhost:3000`） |
 
 ### 3. 開発サーバーの起動

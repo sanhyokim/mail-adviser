@@ -13,7 +13,7 @@ export async function callOpenRouter(
       'X-Title': 'Mail Adviser',
     },
     body: JSON.stringify({
-      model: process.env.OPENROUTER_MODEL || 'google/gemini-2.0-flash-001',
+      model: process.env.OPENROUTER_MODEL || 'google/gemini-2.5-flash',
       messages: [
         { role: 'system', content: systemPrompt },
         { role: 'user', content: userPrompt },
