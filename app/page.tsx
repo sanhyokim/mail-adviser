@@ -176,14 +176,22 @@ export default function Home() {
         )}
       </main>
 
-      {/* ローディングオーバーレイ */}
+      {/* ローディングオーバーレイ（API通信中は動画を再生） */}
       {isLoading && (
         <div
-          className="fixed inset-0 z-[55] bg-white/70 flex flex-col items-center justify-center gap-3"
+          className="fixed inset-0 z-[55] bg-white/80 flex flex-col items-center justify-center gap-4"
           role="status"
           aria-live="polite"
         >
-          <span className="spinner-lg" aria-hidden="true" />
+          <video
+            src="/loading.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            aria-hidden="true"
+            className="w-56 md:w-72 max-w-[80vw] rounded-xl shadow-lg object-contain"
+          />
           <p className="text-sm font-medium text-[#334155]">作成中…</p>
         </div>
       )}
