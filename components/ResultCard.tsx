@@ -9,6 +9,7 @@ interface ResultCardProps {
 
 export default function ResultCard({ message, onEdit }: ResultCardProps) {
   const [copied, setCopied] = useState(false);
+  const [showVideo, setShowVideo] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
@@ -21,6 +22,7 @@ export default function ResultCard({ message, onEdit }: ResultCardProps) {
     try {
       await navigator.clipboard.writeText(message);
       setCopied(true);
+      setShowVideo(true);
       if (timerRef.current) clearTimeout(timerRef.current);
       timerRef.current = setTimeout(() => setCopied(false), 2000);
     } catch {
@@ -56,6 +58,25 @@ export default function ResultCard({ message, onEdit }: ResultCardProps) {
           </button>
         </div>
       </div>
+
+      {/* コピー成功時の動画オーバーレイ（再生終了 or タップで閉じる） */}
+      {showVideo && (
+        <div
+          onClick={() => setShowVideo(false)}
+          className="fixed inset-0 z-[55] bg-black/40 flex items-center justify-center view-fade cursor-pointer"
+          role="presentation"
+        >
+          <video
+            src="/copied.mp4"
+            autoPlay
+            muted
+            playsInline
+            onEnded={() => setShowVideo(false)}
+            aria-hidden="true"
+            className="w-56 md:w-72 max-w-[80vw] rounded-xl shadow-lg object-contain"
+          />
+        </div>
+      )}
     </section>
   );
 }
