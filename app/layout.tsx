@@ -2,12 +2,12 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Mail Adviser',
+  title: '代書屋の角さん',
   description: 'メール文章推敲ツール',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'Mail Adviser',
+    title: '代書屋の角さん',
   },
   icons: {
     icon: [

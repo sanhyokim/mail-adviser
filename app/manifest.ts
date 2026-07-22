@@ -2,8 +2,8 @@ import type { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Mail Adviser',
-    short_name: 'Mail Adviser',
+    name: '代書屋の角さん',
+    short_name: '代書屋の角さん',
     description: 'メール文章推敲ツール',
     start_url: '/',
     display: 'standalone',

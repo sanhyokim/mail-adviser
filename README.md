@@ -1,4 +1,4 @@
-# Mail Adviser
+# 代書屋の角さん（Mail Adviser）
 
 メール文章推敲Webアプリケーション。
 
