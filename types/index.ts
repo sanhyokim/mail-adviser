@@ -1,8 +1,7 @@
 export type ToneType =
   | 'business'
   | 'formal'
-  | 'internal_senior'
-  | 'internal_peer'
+  | 'internal'
   | 'polite_casual'
   | 'apology';
 
@@ -24,14 +23,9 @@ export const TONE_OPTIONS: ToneOption[] = [
     description: '社外・目上の方向け',
   },
   {
-    value: 'internal_senior',
-    label: '社内LINE（先輩・目上向け）',
-    description: '社内の先輩・上司へのLINE向け',
-  },
-  {
-    value: 'internal_peer',
-    label: '社内LINE（同僚・部下向け）',
-    description: '社内の同僚・部下へのLINE向け',
+    value: 'internal',
+    label: '社内LINE',
+    description: '社内連絡向け。入力の口調に合わせて仕上げます',
   },
   {
     value: 'polite_casual',
